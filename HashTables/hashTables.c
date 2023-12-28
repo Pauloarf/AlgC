@@ -1,3 +1,4 @@
+//Close Adressing
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,7 +18,7 @@ unsigned hash(char *str) {
         hash = ((hash << 5) + hash) + c; /*hash * 33 + c*/
     }
 
-    return hash;
+    return hash%SIZE;
 }
 
 void initEmpty(THash t) {
